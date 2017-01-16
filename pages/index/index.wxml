@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true">
+    <swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image"/>
+    </swiper-item>
+  </block>
+</swiper>
+    <view class="index-item">
+      <view class="index-type">
+        <image class="index-image-type" src="../../images/dianying.png"></image>
+        <text class="index-text-type">\n电影</text>
+      </view>
+      <view class="index-type">
+        <image class="index-image-type" src="../../images/wx_dsj.png"></image>
+        <text class="index-text-type">\n电视剧</text>
+      </view>
+      <view class="index-type">
+        <image class="index-image-type" src="../../images/wx_ts.png"></image>
+        <text class="index-text-type">\n特色专题</text>
+      </view>
+      <view class="index-type">
+        <image class="index-image-type" src="../../images/wx_wyqp.png"></image>
+        <text class="index-text-type">\n我要求片</text>
+      </view>
+    </view>
+    <view class="index-item">
+       <view class="index-type">
+        <image class="index-image-type" src="../../images/wx_zy.png"></image>
+        <text class="index-text-type">\n综艺</text>
+      </view>
+      <view class="index-type">
+        <image class="index-image-type" src="../../images/wx_dh.png"></image>
+        <text class="index-text-type">\n动画</text>
+      </view>
+       <view class="index-type">
+         <image class="index-image-type" src="../../images/wx_dsp.png"></image>
+        <text class="index-text-type">\n短视频</text>
+       </view>
+        <view class="index-type"></view>
+    </view>
+    <view class="index-line"></view>
+    
+    <!--影片列表-->
+    <view class="index-video">
+      <view class="index-video-title">
+       <image class="index-sline" src="../../images/wx_shu.png"></image>
+        <text class="index-text-type2">电影</text>
+
+        <text class="index-text-rig">更多></text>
+      </view>
+<view class="index-video-title">
+<block wx:for="{{lists}}" wx:for-index="idx" wx:for-item="itemName"> 
+  <view class="index-type2" id="{{idx}}" bindtap="clickTap">
+        <image class="index-image-video" src="{{itemName.imageUrl}}"></image>
+        <text class="index-text-type">\n{{itemName.name}}</text> 
+</view>     
+  
+
+</block>
+</view>
+</view>
+</scroll-view> 
+</view>
