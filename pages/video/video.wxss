@@ -1,0 +1,7 @@
+.section{
+    width: 100%;
+}
+
+.tc{
+    width: 100%;
+}
